@@ -32,11 +32,48 @@ $(document).on('click', '.header_drop-opener > a', function(){
 })
 
 $(document).ready(function(){
+
+    jQuery.validator.addMethod("checkMask", function(value, element) {
+        return /\+\d{2}\(\d{3}\)\d{2}-\d{2}-\d{3}/g.test(value); 
+    });
+   
+
+    $("#form").validate({
+        rules:{
+
+            name: {
+                required: true,
+                minlength: 2
+            },
+
+            email: {
+                required: true,
+                email: true
+            },
+            phone: {
+                checkMask: true
+            }
+        },
+        messages: {
+            name: "Введите ваше имя",
+            email: {
+                required: "Введите вашу электронную почту",
+                email: "Ваша почта должна быть в формате name@domain.com"
+              },
+            phone: {
+              required: "Введите номер телефона",
+              checkMask: "Введите полный номер телефона"
+            }
+          }
+     });
+
+    $("#phone").mask("+38(099)99-99-999", {autoclear: false});
+
     $('.carousel').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 20000,
+        autoplaySpeed: 5000,
         dots: true,
         arrows:false,
         аccessibility: false
@@ -69,6 +106,18 @@ $(document).ready(function(){
 
 
   });
+
+
+
+    $(window).load(function(){
+        
+        $(".advantages_text").mCustomScrollbar({
+            theme:"rounded-dots-dark"
+        });
+        
+    });
+
+
 
   $('.select').each(function() {
     const _this = $(this),

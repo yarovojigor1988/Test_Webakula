@@ -139,7 +139,27 @@ ul{
     padding: 20px 25px;
     width: 100%;
     min-width: 240px;
+    max-height: 300px;
+    overflow: auto;
 }
+
+.header_nav-drop::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+.header_nav-drop::-webkit-scrollbar-track {
+    background: #e1e0e0;
+    border: 4px solid transparent;
+    background-clip: content-box;   
+}
+
+.header_nav-drop::-webkit-scrollbar-thumb {
+    background: #fbd341;
+    border-radius: 5px;
+
+    
+} 
 
 .header_drop-opener:hover > .header_nav-drop{
     
@@ -385,29 +405,29 @@ ul{
     padding-bottom: 74px;
 }
 
-.advantages_text::-webkit-scrollbar {
-    width: 10px;
+/* .advantages_text::-webkit-scrollbar {
+    width: 5px;
+
 }
 
 .advantages_text::-webkit-scrollbar-track {
     background: #e1e0e0;
     border: 4px solid transparent;
-    background-clip: content-box;   /* THIS IS IMPORTANT */
+    background-clip: content-box;   
 }
 
 .advantages_text::-webkit-scrollbar-thumb {
-    /* background: #fbd341; */
     background: #fbd341;
-    border-radius: 10px;
+    border-radius: 5px;
 
     
-}
+} */
 
 .advantages_text{
     padding: 70px 50px 0 90px;
     font-size: 17px;
     line-height: 1.35;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     max-height: 310px;
     
 }
@@ -635,6 +655,14 @@ ul{
         -ms-transform: scaleY(-1);
          -o-transform: scaleY(-1);
             transform: scaleY(-1);
+}
+
+label.error{
+    color: red;
+    position: absolute;
+    left: 5px;
+    bottom: 100%;
+
 }
 
 @media(max-width: 1620px) {
@@ -914,6 +942,7 @@ ul{
         visibility: visible;
         opacity: 1;
         background-color: #fbd341;
+        max-height: unset;
     }
 
     .header_drop-opener::after {

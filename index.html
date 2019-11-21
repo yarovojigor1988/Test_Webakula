@@ -8,7 +8,8 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"> -->
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>  
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">    
     <link rel="stylesheet" href="css/style.css">    
 </head>
 <body>
@@ -45,6 +46,16 @@
                                         <a href="#" class="nav_list-item drop-opener">Туры</a> 
                                         <div class="header_nav-drop">
                                             <ul class="header_drop-list">
+                                                <li><a href="#" class="header_drop-item">Горящие туры</a></li>
+                                                <li><a href="#" class="header_drop-item">Поиск тура</a></li>
+                                                <li><a href="#" class="header_drop-item">Туры по Украине</a></li>
+                                                <li><a href="#" class="header_drop-item">Экскурсионные туры</a></li>
+                                                <li><a href="#" class="header_drop-item">Week end туры</a></li>
+                                                <li><a href="#" class="header_drop-item">Горящие туры</a></li>
+                                                <li><a href="#" class="header_drop-item">Поиск тура</a></li>
+                                                <li><a href="#" class="header_drop-item">Туры по Украине</a></li>
+                                                <li><a href="#" class="header_drop-item">Экскурсионные туры</a></li>
+                                                <li><a href="#" class="header_drop-item">Week end туры</a></li>
                                                 <li><a href="#" class="header_drop-item">Горящие туры</a></li>
                                                 <li><a href="#" class="header_drop-item">Поиск тура</a></li>
                                                 <li><a href="#" class="header_drop-item">Туры по Украине</a></li>
@@ -342,8 +353,7 @@
                 <div class="advantages_content">
                     <img class="advantages_img" src="img/advantages.png" alt="advantages">
                     <div class="advantages_text">
-                        Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. 
-
+                        Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. Очень долго подбирали разные варианты для того, чтобы отпраздновать свой юбилейный День рождения в путешествии и не могли определиться... Решили обратиться за помощью в турагенство. Гульнара, выслушав все пожелания, предложила отдых в Турции, отель Justiniano Club Park Conti 5* в Окурджалар возле Аланьи. Мы очень благодарны ей за предложенный вариант!!!! Отдых получился отличный! Отель с большой ухоженной территорией, внимательный обслуживающий персонал. Отличный номер с видом на море. 
                     </div>
                 </div>
             </div>
@@ -354,12 +364,12 @@
                 <div class="container">
                     <h2 class="form_title">ХОЧУ ПРЕДЛОЖЕНИЕ ПО ТУРУ</h2>
                     <div class="form_holder">
-                        <form action class="form">
-                            <div class="form_input-holder"><input placeholder="Имя" class="form_input" type="text" name="name" id="name"></div>
-                            <div class="form_input-holder"><input placeholder="Email" class="form_input" type="text" name="mail" id="mail"></div>
-                            <div class="form_input-holder"><input placeholder="Телефон" class="form_input" type="text" name="phone" id="phone"></div>
+                        <form action id="form" class="form">
+                            <div class="form_input-holder"><input placeholder="Имя" class="form_input" type="text" name="name" id="name" required></div>
+                            <div class="form_input-holder"><input placeholder="Email" class="form_input" type="email" name="email" id="email" required></div>
+                            <div class="form_input-holder"><input placeholder="Телефон" class="form_input" type="tel" name="phone" id="phone" required></div>
                             <div class="form_input-holder">
-                                <select name="countries" id="countries" class="form_input select">
+                                <select name="countries" id="countries" class="form_input select" required>
                                     <option disabled value="" class=" ">Страна тура</option>
                                     <option class="select_options" value="Турция ">Турция</option>
                                     <option class="select_options" value="Египет">Египет</option>
@@ -421,8 +431,11 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="js/Plugins/jquery.validate.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
 </body>
